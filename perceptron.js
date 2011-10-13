@@ -3,18 +3,22 @@ var n_ins = 3;
 var x = null;
 var w = new Array(-3.0839, 1.560212, 2.475722, -0.735356);
 
+function load_w(){
+	w = new Array(4);
+
+	w = $('#synaptic_weights').val().split(';');
+}
+
 function load_x(){
 	x = new Array(10);
 	for (i=0;i<10;++i){
 		x[i] = new Array(4);
 	}
 
-	inputs = $('#input').val().split('\n');
+	inputs = $('#inputs').val().split('\n');
 	for (i=0; i<inputs.length; i++){
 		x[i] = inputs[i].split(';');
 	}
-
-	console.log(x);
 
 	// x[0][0] = -1;
 	// x[0][1] = -0.3665;
@@ -62,6 +66,7 @@ $(document).ready(function(){
 	matrix = new Matrix();
 	rna = new RNA();
 
+	load_w();
 	load_x();
 
 	for (i in x){
