@@ -53,7 +53,6 @@ function load_x(){
 
 function multi_matrix(a, b){
 	if (a.length != b.length){
-		console.log('Matrizes com tamanhos diferentes!');
 		return 0;
 	}
 
@@ -73,8 +72,6 @@ function sinal(u){
 }
 
 $(document).ready(function(){
-	console.log('Pesos: '+w);
-
 	load_x();
 
 	for (i in x){
