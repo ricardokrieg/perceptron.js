@@ -51,31 +51,14 @@ function load_x(){
 	x[9][3] = 1.2548;
 }
 
-function multi_matrix(a, b){
-	if (a.length != b.length){
-		return 0;
-	}
-
-	r = 0;
-	for (i in a){
-		r += a[i]*b[i]
-	}
-
-	return r;
-}
-
-function sinal(u){
-	if (u >= 0)
-		return 1.0;
-	else
-		return -1.0;
-}
-
 $(document).ready(function(){
+	matrix = new Matrix();
+	rna = new RNA();
+
 	load_x();
 
 	for (i in x){
 		$('#result').append('Amostra: '+x[i]);
-		$('#result').append('<br>Saída: '+sinal(multi_matrix(x[i], w))+'<br><br>');
+		$('#result').append('<br>Saída: '+rna.sinal(matrix.dot(x[i], w))+'<br><br>');
 	}
 });
