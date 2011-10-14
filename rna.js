@@ -13,5 +13,9 @@ var RNA = $.Class.create({
 			return 1.0;
 		else
 			return -1.0;
+	},
+
+	hebb: function(synaptic_weights, output, y, input, n){
+		return synaptic_weights + matrix.dot_scalar(n*(output-y), input);
 	}
 });
