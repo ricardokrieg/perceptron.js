@@ -43,7 +43,7 @@ function train(){
 
 			if (y != outputs[i]){
 				error = true;
-				synaptic_weights = rna.hebb(synaptic_weights, outputs[i], y, inputs[i], 0.5);
+				synaptic_weights = rna.hebb(synaptic_weights, outputs[i], y, inputs[i], 0.01);
 			}
 		}
 
@@ -52,8 +52,9 @@ function train(){
 			break;
 	} while (error);
 
-	console.log(epoch);
-	console.log(error);
+	$('#synaptic_weights').html(synaptic_weights.toString());
+	$('#epoch').html(epoch);
+	$('#train_synaptic_weights_container').show();
 }
 
 function run(){

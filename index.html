@@ -19,12 +19,12 @@
 		<div style='float:left'>
 			<div id='synaptic_weights_container'>
 				<h6>Synaptic Weights</h6>
-				<input id='synaptic_weights' type='text' value='-3.0839;1.560212;2.475722;-0.735356' />
+				<input id='synaptic_weightsx' type='text' value='-3.0839;1.560212;2.475722;-0.735356' />
 			</div>
 
 			<div id='inputs_container'>
 				<h6>Inputs</h6>
-				<textarea id='inputs'>
+				<textarea id='inputsx'>
 	-1;-0.3665;0.0620;5.9891
 	-1;-0.7842;1.1267;5.5912
 	-1;0.3012;0.5611;5.8234
@@ -49,6 +49,13 @@
 		<textarea id='train_inputs'></textarea>
 
 		<a href='#' id='lnk_train'>Train</a>
+
+		<div id='train_synaptic_weights_container' style='display:none'>
+			<h6>Synaptic Weights<h6/>
+			<div id='synaptic_weights'></div>
+			<h6>Epochs</6>
+			<div id='epoch'></div>
+		</div>
 	</div>
 </body>
 </html>
