@@ -7,8 +7,8 @@ var Matrix = $.Class.create({
 		}
 
 		r = 0;
-		for (i in a){
-			r += a[i]*b[i]
+		for (__i in a){
+			r += a[__i]*b[__i]
 		}
 
 		return r;
@@ -16,8 +16,8 @@ var Matrix = $.Class.create({
 
 	dot_scalar: function(n, a){
 		r = new Array();
-		for (i in a){
-			r.push(a[i]*n);
+		for (__i in a){
+			r.push(a[__i]*n);
 		}
 
 		return r;
@@ -29,8 +29,8 @@ var Matrix = $.Class.create({
 		}
 
 		r = new Array();
-		for (i in a){
-			r.push(a[i]+b[i]);
+		for (__i in a){
+			r.push(a[__i]+b[__i]);
 		}
 
 		return r;

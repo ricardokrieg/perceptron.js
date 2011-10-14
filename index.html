@@ -13,33 +13,42 @@
 <body>
 	<h1>Perceptron.js</h1>
 
-	<a href='#' id='lnk_run'>Run</a>
+	<div id='production_container' style='display:none'>
+		<a href='#' id='lnk_run'>Run</a>
 
-	<div style='float:left'>
-		<div id='synaptic_weights_container'>
-			<h6>Synaptic Weights</h6>
-			<input id='synaptic_weights' type='text' value='-3.0839;1.560212;2.475722;-0.735356' />
+		<div style='float:left'>
+			<div id='synaptic_weights_container'>
+				<h6>Synaptic Weights</h6>
+				<input id='synaptic_weights' type='text' value='-3.0839;1.560212;2.475722;-0.735356' />
+			</div>
+
+			<div id='inputs_container'>
+				<h6>Inputs</h6>
+				<textarea id='inputs'>
+	-1;-0.3665;0.0620;5.9891
+	-1;-0.7842;1.1267;5.5912
+	-1;0.3012;0.5611;5.8234
+	-1;0.7757;1.0648;8.0677
+	-1;0.1570;0.8028;6.3040
+	-1;-0.7014;1.0316;3.6005
+	-1;0.3748;0.1536;6.1537
+	-1;-0.6920;0.9404;4.4058
+	-1;-1.3970;0.7141;4.9263
+	-1;-1.8842;-0.2805;1.2548</textarea>
+			</div>
 		</div>
 
-		<div id='inputs_container'>
-			<h6>Inputs</h6>
-			<textarea id='inputs'>
--1;-0.3665;0.0620;5.9891
--1;-0.7842;1.1267;5.5912
--1;0.3012;0.5611;5.8234
--1;0.7757;1.0648;8.0677
--1;0.1570;0.8028;6.3040
--1;-0.7014;1.0316;3.6005
--1;0.3748;0.1536;6.1537
--1;-0.6920;0.9404;4.4058
--1;-1.3970;0.7141;4.9263
--1;-1.8842;-0.2805;1.2548</textarea>
+		<div style='float:right'>
+			<h5>Output</h5>
+			<div id='output'></div>
 		</div>
 	</div>
 
-	<div style='float:right'>
-		<h5>Output</h5>
-		<div id='output'></div>
+	<div id='train_container'>
+		<h6>Inputs</h6>
+		<textarea id='train_inputs'></textarea>
+
+		<a href='#' id='lnk_train'>Train</a>
 	</div>
 </body>
 </html>
