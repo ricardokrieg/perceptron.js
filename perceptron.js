@@ -62,15 +62,22 @@ function load_x(){
 	// x[9][3] = 1.2548;
 }
 
+function run(){
+	for (i in x){
+		$('#output').append('Input: '+x[i]);
+		$('#output').append('<br>Output: '+rna.sinal(matrix.dot(x[i], w))+'<br><br>');
+	}
+}
+
 $(document).ready(function(){
+	$('#lnk_run').click(function(e){
+		e.preventDefault();
+		run();
+	});
+
 	matrix = new Matrix();
 	rna = new RNA();
 
 	load_w();
 	load_x();
-
-	for (i in x){
-		$('#output').append('Input: '+x[i]);
-		$('#output').append('<br>Output: '+rna.sinal(matrix.dot(x[i], w))+'<br><br>');
-	}
 });
