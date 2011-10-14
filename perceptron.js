@@ -1,10 +1,8 @@
-var inputs = null;
-var w = null;
+var inputs;
+var synaptic_weights;
 
-function load_w(){
-	w = new Array(4);
-
-	w = $('#synaptic_weights').val().split(';');
+function load_synaptic_weights(){
+	synaptic_weights = $('#synaptic_weights').val().split(';');
 }
 
 function load_inputs(){
@@ -17,7 +15,7 @@ function load_inputs(){
 function run(){
 	for (i in inputs){
 		$('#output').append('Input: '+inputs[i]);
-		$('#output').append('<br>Output: '+rna.sinal(matrix.dot(inputs[i], w))+'<br><br>');
+		$('#output').append('<br>Output: '+rna.sinal(matrix.dot(inputs[i], synaptic_weights))+'<br><br>');
 	}
 }
 
@@ -30,6 +28,6 @@ $(document).ready(function(){
 	matrix = new Matrix();
 	rna = new RNA();
 
-	load_w();
+	load_synaptic_weights();
 	load_inputs();
 });
